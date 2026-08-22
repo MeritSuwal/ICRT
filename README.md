@@ -316,16 +316,6 @@ The project report proposes:
 ---
 
 
-## 📌 Project Objectives
-
-- Extract meaningful visual information from input images.
-- Generate descriptive and contextually relevant captions.
-- Combine computer vision and natural language processing through a CNN–Transformer architecture.
-- Provide a usable web interface for image caption generation.
-- Evaluate the system quantitatively and qualitatively.
-
----
-
 ## SCREENSHOTS
 
 ![](assets/ss.jpg)

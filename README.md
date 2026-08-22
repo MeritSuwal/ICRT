@@ -25,53 +25,6 @@ ICRT is a deep-learning image captioning project developed as a CNN–Transforme
 
 The system follows a dual-model encoder–decoder pipeline:
 
-```text
-                         ICRT SYSTEM
-                              │
-                         Input Image
-                              │
-                              ▼
-                    ┌───────────────────┐
-                    │   Preprocessing   │
-                    │ Resize / Normalize│
-                    └─────────┬─────────┘
-                              │
-                              ▼
-                    ┌───────────────────┐
-                    │    ResNet-101     │
-                    │  CNN Encoder      │
-                    │ Feature Extraction│
-                    └─────────┬─────────┘
-                              │
-                    Spatial Feature Map
-                       (14 × 14 × 2048)
-                              │
-                              ▼
-                    ┌───────────────────┐
-                    │ Positional        │
-                    │ Encoding          │
-                    └─────────┬─────────┘
-                              │
-                              ▼
-                    ┌───────────────────┐
-                    │    Transformer    │
-                    │      Decoder      │
-                    │                   │
-                    │ Multi-Head        │
-                    │ Attention +       │
-                    │ Feed Forward      │
-                    └─────────┬─────────┘
-                              │
-                         Word Sequence
-                              │
-                              ▼
-                       Beam Search
-                              │
-                              ▼
-                    ┌───────────────────┐
-                    │ Generated Caption │
-                    └───────────────────┘
-```
 
 ### System block diagram
 
@@ -362,39 +315,6 @@ The project report proposes:
 
 ---
 
-## 📁 Suggested Repository Structure
-
-```text
-ICRT/
-├── README.md
-├── assets/
-│   ├── architecture.png
-│   └── training-validation-loss.png
-│
-├── app/
-│   └── <streamlit application>
-│
-├── model/
-│   ├── encoder/
-│   ├── decoder/
-│   └── checkpoints/
-│
-├── preprocessing/
-│   ├── image_preprocessing/
-│   └── caption_preprocessing/
-│
-├── notebooks/
-│   └── experiments/
-│
-├── data/
-│   └── <dataset files>
-│
-└── requirements.txt
-```
-
-> The exact filenames and directory structure should be adjusted to match the implementation in the repository.
-
----
 
 ## 📌 Project Objectives
 
@@ -406,6 +326,13 @@ ICRT/
 
 ---
 
+## SCREENSHOTS
+
+![](assets/ss.jpg)
+![](assets/ss_dataset.jpg)
+
+---
+
 ## 🏁 Conclusion
 
 ICRT demonstrates a practical image-captioning pipeline that bridges **computer vision and natural language processing** using a ResNet-101 encoder and Transformer-based decoder. The model achieved **84.86% Top-5 Accuracy** and a best **BLEU-1 score of 0.7336 at epoch 22**, showing that the architecture can learn useful visual representations and convert them into relevant textual descriptions.
@@ -414,20 +341,3 @@ The evaluation also shows the trade-off between caption quality and inference sp
 
 ---
 
-## 👥 Authors
-
-**Kathmandu Engineering College — Department of Computer Engineering**
-
-- Aabid Ali Mansoor
-- Mahesh Acharya
-- Merit Singh Suwal
-
-Project: **ICRT — Image Captioning based on ResNet and Transformer**
-
----
-
-## 📄 Project Report
-
-This README is based on the ICRT project report submitted to the Department of Computer Engineering, Kathmandu Engineering College, Tribhuvan University.
-
-**Code Number:** CT 654

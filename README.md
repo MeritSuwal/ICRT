@@ -15,9 +15,6 @@ ICRT is a deep-learning image captioning project developed as a CNN–Transforme
 - 🔎 **Beam search** improves caption generation by evaluating multiple candidate sequences.
 - 💾 **MongoDB** stores generated captions and associated images/session results.
 - 🌐 **Streamlit** provides the user-facing web interface.
-- ✅ Image validation and error handling are included in the application.
-- 🧪 Unit, integration, black-box, walkthrough, inspection, and performance testing were performed.
-- ⚡ GPU inference is substantially faster than CPU inference according to the project evaluation.
 
 ---
 
